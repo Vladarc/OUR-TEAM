@@ -12,3 +12,16 @@ color:$fc
     left: $left;
     transform: translate($delta_x,$delta_y);
 }
+
+@mixin tr(){
+    transition: all .4s ease-in;
+}
+
+@mixin hover () {
+    @include tr;
+    &:hover,
+    &:focus,
+    &:active{
+        @content
+    }
+}

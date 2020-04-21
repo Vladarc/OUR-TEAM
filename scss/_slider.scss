@@ -1,3 +1,14 @@
+@mixin slider-hover{
+    @include tr;
+    &:hover,
+    &:focus,
+    &:active,
+    &--active{
+        @content
+    }
+}
+
+
 .slider {
    
     position: relative;
@@ -56,14 +67,13 @@
         background-color: $primary-color;
         border: $border-width solid $secondary-color ;
         outline: none;
-        &:hover,
-        &:active,
-        &:focus,
-        &--active {
-            cursor: pointer;
-        background-color:$secondary-color ;
-        border-color: $primary-color ;
-}
+   @include tr;
+   @include slider-hover{
+       background-color: $secondary-color;
+       border-color: $primary-color;
+       cursor: pointer;
+   }
+  
 }
 }
 

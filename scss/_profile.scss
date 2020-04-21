@@ -59,6 +59,15 @@ display: flex;
    }
    &__text{
        margin-bottom: 25px;
+       &::after{
+           content: '';
+           display: block;
+           margin: 25px auto 0;
+           width: 50px;
+           height: 4px;
+           background-image: linear-gradient(to right, $primary-color 0%,$primary-color 20%,$secondary-color 20%,$secondary-color 30%,$primary-color 30%,$primary-color 70%,$secondary-color 70%,$secondary-color 80%,$primary-color 80%);
+        
+       }
    }
    &__link{
    @include font($btn-ff,1.4rem,$dark-gray,700,1);
@@ -66,5 +75,10 @@ display: flex;
    border:$border-width solid $primary-color ;
    display: inline-block;
    padding: .5em 1.5em;
+      
+   @include hover(){
+    background-color: $primary-color;
+    color: $secondary-color;
+}
    }
 }

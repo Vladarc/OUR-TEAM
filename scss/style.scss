@@ -3,9 +3,12 @@
 @import 'variables';
 @import 'mixins';
 @import 'slider';
+@import 'socials';
 
 
-
+*{
+    box-sizing: border-box;
+}
 html{
     font-size: 10px;
 }
@@ -23,11 +26,11 @@ background-color: $body-bg;
 a,button{
     transition: all .3s ease-in;
 }
-a:hover,a:focus,a:active,
+/* a:hover,a:focus,a:active,
 button:hover,button:active,button:focus{
     transition:  all .3s ease-in;
 }
-
+ */
 
 
 .head{
